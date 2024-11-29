@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "chest_x_ray_images_(pneumonia)"
+version = "0.0.1"
+description = "Chest X-Ray, predicci\u00f3n de la presence ou pas de la pnemonie viral ou bacteriene"
+authors = [
+  { name = "Adrian Ubeda Touati" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=Python 3.12.6"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["chest_x_ray_images_(pneumonia)"]
+force_sort_within_sections = true
